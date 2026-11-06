@@ -1,0 +1,920 @@
+```html
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Enrolados ✨ | A História de Rapunzel</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Great+Vibes&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #f8eaff;
+    color: #40204f;
+    font-family: "Quicksand", sans-serif;
+}
+
+/* =========================
+   CAPA
+========================= */
+
+.inicio {
+    min-height: 100vh;
+
+    background:
+        linear-gradient(
+            rgba(57, 20, 79, 0.65),
+            rgba(101, 49, 125, 0.65)
+        ),
+        url("https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Rapunzel_Tower.jpg/800px-Rapunzel_Tower.jpg");
+
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+    padding: 30px;
+}
+
+.capa {
+    max-width: 800px;
+    color: white;
+}
+
+.era {
+    font-family: "Great Vibes", cursive;
+    font-size: 4rem;
+    margin-bottom: 10px;
+}
+
+.titulo {
+    font-family: "Cinzel", serif;
+    font-size: 4rem;
+    letter-spacing: 5px;
+    color: #ffd66b;
+
+    text-shadow:
+        0 3px 5px #32103e;
+}
+
+.subtitulo {
+    font-size: 1.3rem;
+    margin-top: 15px;
+}
+
+.botao {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 14px 30px;
+    background: #ffd66b;
+    color: #542267;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.botao:hover {
+    transform: scale(1.08);
+    background: #fff0a8;
+}
+
+/* =========================
+   MENU
+========================= */
+
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: #542267;
+    padding: 15px;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: 600;
+}
+
+nav a:hover {
+    color: #ffd66b;
+}
+
+/* =========================
+   SEÇÕES
+========================= */
+
+section {
+    padding: 80px 8%;
+}
+
+.titulo-secao {
+    text-align: center;
+    font-family: "Cinzel", serif;
+    font-size: 2.5rem;
+    color: #633178;
+    margin-bottom: 40px;
+}
+
+/* =========================
+   PERSONAGENS
+========================= */
+
+.personagens {
+    background: #fff7ff;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.card {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    text-align: center;
+
+    box-shadow: 0 8px 25px rgba(70, 30, 90, 0.15);
+
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+}
+
+.card h3 {
+    font-family: "Cinzel", serif;
+    color: #633178;
+    margin: 18px 0 8px;
+}
+
+.card p {
+    padding: 0 20px 25px;
+    line-height: 1.6;
+}
+
+/* =========================
+   LIVRO
+========================= */
+
+.livro {
+    background:
+        radial-gradient(
+            circle at center,
+            #fffdf4,
+            #f5dfb6
+        );
+}
+
+.pagina {
+    max-width: 900px;
+    margin: auto;
+    background: #fffaf0;
+    padding: 60px;
+
+    border: 10px solid #d3a74c;
+
+    box-shadow:
+        0 10px 30px rgba(70, 40, 20, 0.2);
+
+    position: relative;
+}
+
+.pagina::before {
+    content: "✦";
+    position: absolute;
+    top: 15px;
+    left: 25px;
+    font-size: 30px;
+    color: #c99b32;
+}
+
+.pagina::after {
+    content: "✦";
+    position: absolute;
+    bottom: 15px;
+    right: 25px;
+    font-size: 30px;
+    color: #c99b32;
+}
+
+.era-livro {
+    font-family: "Great Vibes", cursive;
+    font-size: 3.5rem;
+    color: #8c5c20;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.texto-livro {
+    font-family: Georgia, serif;
+    font-size: 1.15rem;
+    line-height: 2;
+    text-align: justify;
+}
+
+.texto-livro::first-letter {
+    font-size: 4rem;
+    float: left;
+    line-height: 0.8;
+    padding-right: 8px;
+    color: #a97924;
+}
+
+/* =========================
+   QUIZ
+========================= */
+
+.quiz {
+    background: #ead5f4;
+}
+
+.quiz-container {
+    max-width: 850px;
+    margin: auto;
+    background: white;
+    padding: 40px;
+    border-radius: 25px;
+
+    box-shadow:
+        0 10px 30px rgba(60, 20, 80, 0.15);
+}
+
+.pergunta {
+    display: none;
+}
+
+.pergunta.ativa {
+    display: block;
+    animation: aparecer 0.5s ease;
+}
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.pergunta h3 {
+    margin-bottom: 18px;
+    color: #542267;
+}
+
+.alternativa {
+    display: block;
+    padding: 13px 18px;
+    margin: 10px 0;
+
+    border: 2px solid #dec7e7;
+    border-radius: 12px;
+
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.alternativa:hover {
+    background: #f4e8fa;
+    border-color: #8d55a5;
+}
+
+.alternativa input {
+    margin-right: 10px;
+}
+
+#resultado {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #633178;
+}
+
+#progresso {
+    text-align: center;
+    color: #8d55a5;
+    margin-bottom: 25px;
+    font-weight: bold;
+}
+
+.btn-reiniciar {
+    display: block;
+    margin: 25px auto 0;
+
+    border: none;
+    background: #633178;
+    color: white;
+
+    padding: 15px 35px;
+    border-radius: 30px;
+
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.btn-reiniciar:hover {
+    background: #7d4495;
+}
+
+/* =========================
+   FINAL
+========================= */
+
+.final {
+    text-align: center;
+    background: #542267;
+    color: white;
+    padding: 70px 20px;
+}
+
+.final h2 {
+    font-family: "Great Vibes", cursive;
+    font-size: 3.5rem;
+    color: #ffd66b;
+}
+
+.final p {
+    margin-top: 15px;
+    font-size: 1.1rem;
+}
+
+footer {
+    background: #36133f;
+    color: #dcbde8;
+    text-align: center;
+    padding: 20px;
+}
+
+/* =========================
+   RESPONSIVO
+========================= */
+
+@media (max-width: 600px) {
+
+    .era {
+        font-size: 2.8rem;
+    }
+
+    .titulo {
+        font-size: 2.5rem;
+    }
+
+    .subtitulo {
+        font-size: 1rem;
+    }
+
+    nav a {
+        margin: 0 5px;
+        font-size: 0.8rem;
+    }
+
+    section {
+        padding: 60px 5%;
+    }
+
+    .pagina {
+        padding: 35px 25px;
+    }
+
+    .era-livro {
+        font-size: 2.7rem;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- =========================
+     CAPA
+========================= -->
+
+<header class="inicio" id="inicio">
+
+    <div class="capa">
+
+        <p class="era">
+            Era uma vez...
+        </p>
+
+        <h1 class="titulo">
+            ENROLADOS
+        </h1>
+
+        <p class="subtitulo">
+            Uma história de sonhos, coragem, descobertas
+            e uma princesa de cabelos mágicos.
+        </p>
+
+        <a href="#personagens" class="botao">
+            Entrar na história ✨
+        </a>
+
+    </div>
+
+</header>
+
+<!-- =========================
+     MENU
+========================= -->
+
+<nav>
+
+    <a href="#inicio">Início</a>
+    <a href="#personagens">Personagens</a>
+    <a href="#historia">História</a>
+    <a href="#quiz">Quiz</a>
+
+</nav>
+
+<!-- =========================
+     PERSONAGENS
+========================= -->
+
+<section class="personagens" id="personagens">
+
+    <h2 class="titulo-secao">
+        ✨ Personagens ✨
+    </h2>
+
+    <div class="cards">
+
+        <!-- RAPUNZEL -->
+
+        <div class="card">
+
+            <img
+                src="https://i.pinimg.com/564x/6f/60/9a/6f609abfbbd871940b425a9ae5ec5ffc.jpg"
+                alt="Rapunzel">
+
+            <h3>Rapunzel</h3>
+
+            <p>
+                Rapunzel é uma jovem princesa de cabelos mágicos
+                que vive em uma torre. Ela é curiosa, corajosa e
+                sonha em conhecer o mundo além dela.
+            </p>
+
+        </div>
+
+        <!-- FLYNN -->
+
+        <div class="card">
+
+            <img
+                src="https://i.pinimg.com/736x/eb/31/ca/eb31ca2db2c504ea289cf45b201e6c3a.jpg"
+                alt="Flynn Rider">
+
+            <h3>Flynn Rider</h3>
+
+            <p>
+                Um aventureiro divertido e confiante que acaba se
+                tornando companheiro de Rapunzel em sua aventura.
+            </p>
+
+        </div>
+
+        <!-- PASCAL -->
+
+        <div class="card">
+
+            <img
+                src="https://i.pinimg.com/736x/4a/ea/f0/4aeaf0e2a2e5459e4b41d99f7f3ad3ec.jpg"
+                alt="Pascal">
+
+            <h3>Pascal</h3>
+
+            <p>
+                Um pequeno camaleão e fiel melhor amigo de Rapunzel,
+                sempre ao lado dela.
+            </p>
+
+        </div>
+
+        <!-- MAXIMUS -->
+
+        <div class="card">
+
+            <img
+                src="https://i.pinimg.com/736x/b0/1c/84/b01c8449e769720fb05240a21710236f.jpg"
+                alt="Maximus">
+
+            <h3>Maximus</h3>
+
+            <p>
+                Um cavalo corajoso e determinado que ajuda a proteger
+                Rapunzel e seus amigos.
+            </p>
+
+        </div>
+
+        <!-- MÃE GOTHEL -->
+
+        <div class="card">
+
+            <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQ81nvWPNdWw5dQzM7YsJT0qHMYnOT_F8-QUob1kTPy_i0BRmeLXiYqyTV&s=10"
+                alt="Mãe Gothel">
+
+            <h3>Mãe Gothel</h3>
+
+            <p>
+                Uma mulher que mantém Rapunzel escondida na torre
+                para aproveitar o poder mágico de seus cabelos.
+            </p>
+
+        </div>
+
+        <!-- PAIS DE RAPUNZEL -->
+
+        <div class="card">
+
+            <img
+                src="https://i.pinimg.com/736x/9a/13/d6/9a13d66022a5ac23d3820a2f1b9d944a.jpg"
+                alt="Rei e Rainha">
+
+            <h3>Rei e Rainha</h3>
+
+            <p>
+                Os pais de Rapunzel são os governantes do reino.
+                Eles nunca deixaram de procurar pela filha que
+                desapareceu quando ainda era bebê.
+            </p>
+
+        </div>
+
+        <!-- IRMÃOS DE RAPUNZEL -->
+
+        <div class="card">
+
+            <img
+                src="https://preview.redd.it/i-always-pictured-the-breekon-and-hope-guys-as-the-brothers-v0-qv2tq7k9cswd1.jpeg?width=640&crop=smart&auto=webp&s=6e5ed26f4310c188e2b77dab7a507e732aa21b9b"
+                alt="Irmãos de Rapunzel">
+
+            <h3>Irmãos Stabbington</h3>
+
+            <p>
+                Dois irmãos criminosos que trabalham com Flynn Rider
+        no início da história. Eles são fortes, perigosos e
+        participam do plano para roubar a coroa.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =========================
+     LIVRO / HISTÓRIA
+========================= -->
+
+<section class="livro" id="historia">
+
+    <h2 class="titulo-secao">
+        📖 O livro de Rapunzel
+    </h2>
+
+    <div class="pagina">
+
+        <h3 class="era-livro">
+            Era uma vez...
+        </h3>
+
+        <p class="texto-livro">
+
+            Em um reino distante, uma menina chamada
+            Rapunzel vivia no alto de uma torre escondida
+            na floresta. Ela possuía cabelos mágicos e
+            passava seus dias sonhando com o mundo que
+            existia além das paredes da torre.
+
+            <br><br>
+
+            Todos os anos, Rapunzel observava no céu
+            pequenas luzes que apareciam na noite de seu
+            aniversário. Ela queria descobrir de onde
+            vinham aquelas lanternas e conhecer o mundo
+            que sempre imaginou.
+
+            <br><br>
+
+            Certo dia, um jovem aventureiro chamado
+            Flynn Rider apareceu na torre. A chegada dele
+            mudaria completamente a vida de Rapunzel.
+
+            <br><br>
+
+            Determinada a realizar seu sonho, Rapunzel
+            deixou a torre e partiu para uma grande
+            aventura. Ao lado de seus novos amigos,
+            descobriu lugares que nunca tinha visto,
+            enfrentou desafios e começou a entender
+            quem realmente era.
+
+            <br><br>
+
+            No caminho, Rapunzel percebeu que seus sonhos
+            eram maiores do que ela imaginava. E assim,
+            entre lanternas brilhantes, amizades e muita
+            coragem, ela descobriu que algumas das maiores
+            aventuras começam quando temos coragem de
+            sair do lugar onde sempre estivemos.
+
+        </p>
+
+    </div>
+
+</section>
+
+<!-- =========================
+     QUIZ
+========================= -->
+
+<section class="quiz" id="quiz">
+
+    <h2 class="titulo-secao">
+        ❓ Quiz de Enrolados
+    </h2>
+
+    <div class="quiz-container">
+
+        <div id="progresso">
+            Pergunta 1 de 5
+        </div>
+
+        <!-- PERGUNTA 1 -->
+
+        <div class="pergunta ativa" id="pergunta1">
+
+            <h3>
+                1. Onde Rapunzel passou grande parte de sua vida?
+            </h3>
+
+            <label class="alternativa">
+                <input type="radio" name="q1" value="a" onchange="proximaPergunta(1)">
+                Em um castelo
+            </label>
+
+            <label class="alternativa">
+                <input type="radio" name="q1" value="b" onchange="proximaPergunta(1)">
+                Em uma torre
+            </label>
+
+            <label class="alternativa">
+                <input type="radio" name="q1" value="c" onchange="proximaPergunta(1)">
+                Em uma vila
+            </label>
+
+        </div>
+
+        <!-- PERGUNTA 2 -->
+
+        <div class="pergunta" id="pergunta2">
+
+            <h3>
+                2. Qual é o nome do camaleão amigo de Rapunzel?
+            </h3>
+
+            <label class="alternativa">
+                <input type="radio" name="q2" value="a" onchange="proximaPergunta(2)">
+                Pascal
+            </label>
+
+            <label class="alternativa">
+                <input type="radio" name="q2" value="b" onchange="proximaPergunta(2)">
+                Maximus
+            </label>
+
+            <label class="alternativa">
+                <input type="radio" name="q2" value="c" onchange="proximaPergunta(2)">
+                Flynn
+            </label>
+
+        </div>
+
+        <!-- PERGUNTA 3 -->
+
+        <div class="pergunta" id="pergunta3">
+
+            <h3>
+                3. O que Rapunzel queria muito conhecer?
+            </h3>
+
+            <label class="alternativa">
+                <input type="radio" name="q3" value="a" onchange="proximaPergunta(3)">
+                O fundo do mar
+            </label>
+
+            <label class="alternativa">
+                <input type="radio" name="q3" value="b" onchange="proximaPergunta(3)">
+                O mundo além da torre
+            </label>
+
+            <label class="alternativa">
+                <input type="radio" name="q3" value="c" onchange="proximaPergunta(3)">
+                Outro planeta
+            </label>
+
+        </div>
+
+        <!-- PERGUNTA 4 -->
+
+        <div class="pergunta" id="pergunta4">
+
+            <h3>
+                4. Quem acompanha Rapunzel em sua aventura?
+            </h3>
+
+            <label class="alternativa">
+                <input type="radio" name="q4" value="a" onchange="proximaPergunta(4)">
+                Flynn Rider
+            </label>
+
+            <label class="alternativa">
+                <input type="radio" name="q4" value="b" onchange="proximaPergunta(4)">
+                O Rei
+            </label>
+
+            <label class="alternativa">
+                <input type="radio" name="q4" value="c" onchange="proximaPergunta(4)">
+                Um príncipe desconhecido
+            </label>
+
+        </div>
+
+        <!-- PERGUNTA 5 -->
+
+        <div class="pergunta" id="pergunta5">
+
+            <h3>
+                5. O que aparece no céu todos os anos?
+            </h3>
+
+            <label class="alternativa">
+                <input type="radio" name="q5" value="a" onchange="proximaPergunta(5)">
+                Estrelas cadentes
+            </label>
+
+            <label class="alternativa">
+                <input type="radio" name="q5" value="b" onchange="proximaPergunta(5)">
+                Lanternas flutuantes
+            </label>
+
+            <label class="alternativa">
+                <input type="radio" name="q5" value="c" onchange="proximaPergunta(5)">
+                Foguetes
+            </label>
+
+        </div>
+
+        <div id="resultado"></div>
+
+    </div>
+
+</section>
+
+<!-- =========================
+     FINAL
+========================= -->
+
+<section class="final">
+
+    <h2>
+        E viveram seus sonhos... ✨
+    </h2>
+
+    <p>
+        Porque às vezes precisamos apenas de coragem
+        para descobrir o mundo que existe além da nossa torre.
+    </p>
+
+</section>
+
+<footer>
+    Feito com 💜 e muita magia ✨
+</footer>
+
+<!-- =========================
+     JAVASCRIPT DO QUIZ
+========================= -->
+
+<script>
+
+let pontos = 0;
+
+const respostas = {
+    q1: "b",
+    q2: "a",
+    q3: "b",
+    q4: "a",
+    q5: "b"
+};
+
+function proximaPergunta(numero) {
+
+    const perguntaAtual =
+        document.getElementById("pergunta" + numero);
+
+    const respostaSelecionada =
+        document.querySelector(
+            `input[name="q${numero}"]:checked`
+        );
+
+    if (!respostaSelecionada) {
+        return;
+    }
+
+    if (respostaSelecionada.value === respostas["q" + numero]) {
+        pontos++;
+    }
+
+    perguntaAtual.classList.remove("ativa");
+
+    if (numero < 5) {
+
+        const proxima =
+            document.getElementById("pergunta" + (numero + 1));
+
+        proxima.classList.add("ativa");
+
+        document.getElementById("progresso").innerHTML =
+            "Pergunta " + (numero + 1) + " de 5";
+
+    } else {
+
+        document.getElementById("progresso").innerHTML =
+            "✨ Quiz concluído! ✨";
+
+        mostrarResultado();
+
+    }
+}
+
+function mostrarResultado() {
+
+    const resultado =
+        document.getElementById("resultado");
+
+    if (pontos === 5) {
+
+        resultado.innerHTML =
+            "🌟 Perfeito! Você conhece muito bem a história de Enrolados! 5/5";
+
+    } else if (pontos >= 3) {
+
+        resultado.innerHTML =
+            "✨ Muito bem! Você conhece bastante Enrolados! " +
+            pontos + "/5";
+
+    } else {
+
+        resultado.innerHTML =
+            "💜 Continue explorando a história de Rapunzel! " +
+            pontos + "/5";
+
+    }
+}
+
+</script>
+
+</body>
+</html>
+```
